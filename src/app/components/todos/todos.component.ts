@@ -13,8 +13,6 @@ import { TodoService } from '../../services/todo.service';
 
 export class TodosComponent implements OnInit {
 
-  selectedTodo?: Todo;
-
   todos: Todo[] = [];
 
   constructor(private TodoService: TodoService) { }
@@ -26,10 +24,6 @@ export class TodosComponent implements OnInit {
   getTodos(): void{
     this.TodoService.getTodos()
       .subscribe(todos => this.todos = todos);
-  }
-
-  onSelect(todo: Todo): void {
-    this.selectedTodo = todo;
   }
 
 }

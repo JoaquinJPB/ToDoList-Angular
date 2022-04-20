@@ -16,12 +16,10 @@
                 <td>{{todo.description}}</td>
                 <td>{{todo.completed}}</td>
                 <td>
-                    <button [class.selected]="todo === selectedTodo" type="button" (click)="onSelect(todo)">Edit</button>
+                    <button routerLink="/details/{{todo.id}}">Edit</button>
                     <button>Remove</button>
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
-
-<app-todo-details [todo]="selectedTodo"></app-todo-details>

@@ -17,4 +17,9 @@ export class TodoService {
     return todos;
   }
 
+  getTodo(id: number): Observable<Todo> {
+    const todo = TODOS.find(h => h.id === id)!;
+    return of(todo);
+  }
+
 }
