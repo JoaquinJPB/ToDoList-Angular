@@ -2,16 +2,16 @@
 
     <div><span>id: </span>{{todo.id}}</div>
     <div>
-        <label for="todo-title">Todo title: </label>
-        <input type="text" id="todo-title" placeholder="title">
+        <label for="todo-title">Título</label>
+        <input type="text" id="todo-title" [(ngModel)]="todo.title" placeholder="title">
     </div>
     <div>
-        <label for="todo-description">Todo title: </label>
-        <input type="text" id="todo-description" placeholder="description">
+        <label for="todo-description">Descripción: </label>
+        <input type="text" id="todo-description" [(ngModel)]="todo.description" placeholder="description">
     </div>
     <div>
-        <label for="todo-completed">Todo title: </label>
-        <input type="checkbox" id="todo-completed">
+        <label for="todo-completed">Completado</label>
+        <input type="checkbox" id="todo-completed" [(ngModel)]="todo.completed">
     </div>
 
 
