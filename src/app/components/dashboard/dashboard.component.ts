@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
 
   getTodos(): void {
     this.todoService.getTodos()
-      .subscribe(todos => this.todos = todos.slice(1, 3));
+      .subscribe(todos => this.todos = todos.filter((todo) => todo.completed === false));
   }
 
 }

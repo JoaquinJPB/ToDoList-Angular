@@ -1,0 +1,23 @@
+<div>
+    <div>
+        <label for="new-todo-title">Titulo</label>
+        <input type="text" id="new-todo-title" #todoTitle/>
+    </div>
+    <div>
+        <label for="new-todo-description">Descripción</label>
+        <input type="text" id="new-todo-description" #todoDescription/>
+    </div>
+    <div>
+        <label for="new-todo-title">Completado</label>
+        <input type="checkbox" id="new-todo-completed" #todoCompleted/>
+    </div>
+    
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button 
+        type="button" 
+        class="add-button" 
+        (click)="addTodo(todoTitle.value, todoDescription.value, todoCompleted.checked)"
+        >
+        Add ToDo
+    </button>
+</div>

@@ -1,4 +1,5 @@
 <div class="todos">
+    <app-todo-search></app-todo-search>
     <table>
         <thead>
             <tr>
@@ -17,7 +18,7 @@
                 <td>{{todo.completed}}</td>
                 <td>
                     <button routerLink="/details/{{todo.id}}">Edit</button>
-                    <button>Remove</button>
+                    <button type="button" (click)="delete(todo)">Remove</button>
                 </td>
             </tr>
         </tbody>

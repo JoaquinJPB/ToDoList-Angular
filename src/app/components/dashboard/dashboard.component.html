@@ -1,6 +1,11 @@
-<h2>Task in progress</h2>
-<div class="heroes-menu">
-    <a *ngFor="let todo of todos"  routerLink="/details/{{todo.id}}">
-        {{todo.title}}
-    </a>
-</div>
+<main>
+    <section>
+        <h2>Task in progress</h2>
+        <div class="todos-menu">
+            <a *ngFor="let todo of todos"  routerLink="/details/{{todo.id}}">
+                {{todo.title}}
+            </a>
+        </div>        
+    </section>
+</main>
+
