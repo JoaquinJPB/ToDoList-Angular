@@ -1,5 +1,6 @@
+import { Component, OnInit, } from '@angular/core';
+import { Location } from '@angular/common';
 
-import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-todo-add',
@@ -8,12 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoAddComponent implements OnInit {
 
-  constructor() {}
+  constructor(private location: Location) { }
 
   ngOnInit(): void {}
 
-  addTodo(title: string, description: string, completed: boolean): void {
+  getDataTodo(title: string, description: string, completed: boolean): void {
+    this.sendDataTodo();
+  }
+
+  sendDataTodo(): void{
     
+    this.goBack();
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }

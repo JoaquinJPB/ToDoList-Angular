@@ -2,10 +2,18 @@
     <header>
       <h1>ToDo List</h1>
     </header>
-    <nav>
-      <button routerLink="/dashboard">Dashboard</button>
-      <button routerLink="/todos">ToDo List</button>
-      <button routerLink="/todo-add">Add ToDo</button>
+    <nav class="d-flex justify-content-center my-2">
+      <div class="d-flex justify-content-between mb-3">
+        <button routerLink="/dashboard">
+          <span>Tareas en progreso</span>
+        </button>
+        <button routerLink="/todos" class="mx-2">
+          <span>Lista de tareas</span>
+        </button>
+        <button routerLink="/todo-add">
+          <span>Añadir una tarea</span>  
+        </button>
+      </div>
     </nav>
     <router-outlet></router-outlet>
 </div>

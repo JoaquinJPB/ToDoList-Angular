@@ -28,7 +28,6 @@ import { TodoSearchComponent } from './components/todo-search/todo-search.compon
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )

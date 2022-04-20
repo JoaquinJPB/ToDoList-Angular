@@ -1,26 +1,23 @@
-<div class="todos">
-    <app-todo-search></app-todo-search>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Titulo</th>
-                <th>Descripción</th>
-                <th>Completado</th>
-                <th colspan="2">Actions</th>
-            </tr>
-        </thead>
-        <tbody class="todos">
-            <tr *ngFor="let todo of todos">
-                <td>{{todo.id}}</td>
-                <td>{{todo.title}}</td>
-                <td>{{todo.description}}</td>
-                <td>{{todo.completed}}</td>
-                <td>
-                    <button routerLink="/details/{{todo.id}}">Edit</button>
-                    <button type="button" (click)="delete(todo)">Remove</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<section class="container">
+    <div class="row todo-space">
+        <div class="todo-card card" *ngFor="let todo of todos">
+            <div class="card-body col-sm-12 col-md-8 col-lg-6">
+                <h5 class="card-title">{{todo.title}}</h5>
+                <h6 *ngIf="todo.completed == true" class="card-subtitle mb-2 text-muted"><i class='bx bxs-check-circle todo-icon'></i></h6>
+                <h6 *ngIf="todo.completed == false" class="card-subtitle mb-2 text-muted"><i class='bx bxs-circle-three-quarter todo-icon'></i></h6>
+                <p class="card-text">{{todo.description}}</p>
+                <div class="d-flex flex-row">
+                    <button type="button" routerLink="/details/{{todo.id}}">
+                        <span>Editar</span>
+                    </button>
+                    <button type="button" class="ms-2" (click)="delete(todo)">
+                        <span>Eliminar</span>
+                    </button>
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+</section>
+
+

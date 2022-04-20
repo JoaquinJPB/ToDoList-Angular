@@ -71,4 +71,10 @@ export class TodoService {
     );
   }
 
+  updateTodo(todo: Todo): Observable<any> {
+    return this.http.put(this.todosUrl, todo, this.httpOptions).pipe(
+      catchError(this.handleError<any>('updateTodo'))
+    );
+  }
+
 }
