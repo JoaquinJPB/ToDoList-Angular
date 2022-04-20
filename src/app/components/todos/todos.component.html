@@ -4,6 +4,7 @@
             <tr>
                 <th>ID</th>
                 <th>Titulo</th>
+                <th>Descripción</th>
                 <th colspan="2">Actions</th>
             </tr>
         </thead>
@@ -11,11 +12,14 @@
             <tr *ngFor="let todo of todos">
                 <td>{{todo.id}}</td>
                 <td>{{todo.title}}</td>
+                <td>{{todo.description}}</td>
                 <td>
-                    <button>Edit</button>
+                    <button [class.selected]="todo === selectedTodo" type="button" (click)="onSelect(todo)">Edit</button>
                     <button>Remove</button>
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
+
+<app-todo-details [todo]="selectedTodo"></app-todo-details>
