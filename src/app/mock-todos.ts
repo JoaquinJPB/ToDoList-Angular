@@ -1,4 +1,4 @@
-import { Todo } from '../app/models/Todo';
+import { Todo } from '../app/models/todo';
 
 export const TODOS: Todo[] = [
     { id: 1, title: 'Práctica: Enrutamiento y Navegación', description: "Crea una SPA en Angular que gestione una TO-DO list (CRUD).", completed: false },
