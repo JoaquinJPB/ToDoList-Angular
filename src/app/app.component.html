@@ -1,8 +1,12 @@
 <div class="app">
     <header>
-      <h1>ToDo List</h1>
+      <nav class="navbar navbar-dark bg-dark navbar-home">
+        <a class="navbar-brand ms-2" href="#">
+          ToDo List <i class='bx bx-task'></i> 
+        </a>
+      </nav>
     </header>
-    <nav class="d-flex justify-content-center my-2">
+    <nav class="d-flex justify-content-center mt-4">
       <div class="d-flex justify-content-between mb-3">
         <button routerLink="/dashboard">
           <span>Tareas en progreso</span>
@@ -10,10 +14,15 @@
         <button routerLink="/todos" class="mx-2">
           <span>Lista de tareas</span>
         </button>
-        <button routerLink="/todo-add">
-          <span>Añadir una tarea</span>  
-        </button>
       </div>
     </nav>
     <router-outlet></router-outlet>
+
+    <footer class="footer-home mt-4">
+      <div class="card text-center">
+        <div class="card-header">
+          &#169; Joaquin Javier Pastore Barrios
+        </div>
+      </div>
+    </footer>
 </div>

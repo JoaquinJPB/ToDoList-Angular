@@ -11,7 +11,6 @@ import { TodosComponent } from './components/todos/todos.component';
 import { TodoDetailsComponent } from './components/todo-details/todo-details.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InMemoryDataService } from './services/in-memory-data.service';
-import { TodoAddComponent } from './components/todo-add/todo-add.component';
 import { TodoSearchComponent } from './components/todo-search/todo-search.component';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { TodoSearchComponent } from './components/todo-search/todo-search.compon
     TodosComponent,
     TodoDetailsComponent,
     DashboardComponent,
-    TodoAddComponent,
     TodoSearchComponent,
   ],
   imports: [
