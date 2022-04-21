@@ -16,3 +16,5 @@ Como principal componente encontraremos el todo, que se encarga de crear un todo
 Por último, comentar que se ha usado como referencia, la documentación oficial de Angular, concretamente el tutorial de Tour of heroes.
 
 Fuente: https://angular.io/tutorial
+
+Se puede observar el funcionamiento de la siguente apliación en el siguiente enlace: https://joaquinjpb.github.io/ToDoList-Angular/dashboard
