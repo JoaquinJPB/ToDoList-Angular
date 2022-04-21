@@ -13,9 +13,15 @@
                 <label for="new-todo-title" class="me-2">Completado</label>
                 <input type="checkbox" id="new-todo-completed"  #todoCompleted/>
             </div>
-            
             <!-- (click) passes input value to add() and then clears the input -->
-            <button type="button" (click)="add(todoTitle.value, todoDescription.value, todoCompleted.checked)">
+            <button 
+                type="button" 
+                (click)="add(todoTitle.value, todoDescription.value, todoCompleted.checked);
+                todoTitle.value='';
+                todoDescription.value='';
+                todoCompleted.checked= false;
+                "
+                >
                 <span>Añadir tarea</span>
             </button>
         </div>
