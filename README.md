@@ -7,7 +7,11 @@ Requisitos:
 - Boxicons 2.1.2
 
 Este proyecto se basa en la creación de un To Do List utilizando Angular como framework de desarrollo.
+
 Se ha hecho uso de componentes anidados, servicios, enrutamiento y naveganción, incluyendo lazy load.
+
+Por comentar algunos aspectos, se ha creado un modelo de una To Do, que se compone de un titulo, una descripción y un estado de completado.
+Como principal componente encontraremos el todo, que se encarga de crear un todo y mostrar todos los todos que hay ya creados. También hay un componente de dashboard que muestra las todos que estan en progreso actualmente. Estos dos componentes se pueden mostrar a través de dos botones de navegación que se encuentran en la parte de arriba de la aplicación. 
 
 Se ha usado como referencia, la documentación oficial de Angular, concretamente el turorial de Tour of heroes.
 
