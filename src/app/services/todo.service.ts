@@ -48,16 +48,6 @@ export class TodoService {
     };
   }
 
-  searchTodos(term: string): Observable<Todo[]> {
-    if (!term.trim()) {
-      // if not search term, return empty hero array.
-      return of([]);
-    }
-    return this.http.get<Todo[]>(`${this.todosUrl}/?title=${term}`).pipe(
-      catchError(this.handleError<Todo[]>('searchHeroes', []))
-    );
-  }
-
   addTodo(todo: Todo): Observable<Todo> {
     return this.http.post<Todo>(this.todosUrl, todo, this.httpOptions).pipe(
       catchError(this.handleError<Todo>('addTodo'))
